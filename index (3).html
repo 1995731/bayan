@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6544ce">
+  <meta name="description" content="رحلة تفاعلية تكيفية في عالم الجموع لطلاب الصف الخامس. تعلّم، جرّب، واكتشف تقدّمك.">
+  <title>PluralQuest | مغامرة الجموع</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMjAiIGZpbGw9IiM2NTQ0Y2UiLz48cGF0aCBkPSJNMTYgMjBxMTYtOCAxNiAydjI4cTAtMTAtMTYtNHptMzIgMHEtMTYtOC0xNiAydjI4cTAtMTAgMTYtNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJtNDcgOCAyIDUgNSAyLTUgMi0yIDUtMi01LTUtMiA1LTJ6IiBmaWxsPSIjZmZjZTY5Ii8+PC9zdmc+Cg==" type="image/svg+xml">
+  <style>
+@font-face{font-family:LocalArabic;src:local('Noto Sans Arabic'),local('Noto Naskh Arabic'),local('Tahoma');font-display:swap}
+:root{--ink:#302b43;--muted:#777282;--purple:#6846cc;--purple-dark:#5232aa;--lavender:#f0eafb;--teal:#22897b;--orange:#bc7630;--paper:#fbfaf7;--line:#eae7ee;--shadow:0 10px 35px #32224d07;--font:LocalArabic,'Segoe UI',Tahoma,Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.8}button,a,input{ -webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}button:disabled{cursor:default;opacity:.5}button:disabled.correct-answer,button:disabled.wrong-answer{opacity:1}button:focus-visible,a:focus-visible{outline:3px solid #8b65db;outline-offset:4px}button:active:not(:disabled){transform:translateY(1px)}[hidden]{display:none!important}svg{flex-shrink:0;vertical-align:middle}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.6}button{line-height:1.6}main:focus{outline:none}main{width:min(1160px,calc(100% - 80px));margin:0 auto;padding:36px 0 42px;min-height:75vh}.site-header{background:#fff;border-bottom:1px solid var(--line)}.header-inner{max-width:1240px;min-height:94px;margin:auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:12px}.brand-icon{display:flex;align-items:center;justify-content:center;width:46px;height:46px;transform:rotate(-5deg);border-radius:15px 15px 7px 15px;background:var(--purple);color:white;font-size:28px;font-weight:bold;box-shadow:0 4px 0 #e6ddfa}.brand b{display:block;font-family:'Segoe UI',Arial,sans-serif;font-size:24px;letter-spacing:-1px;line-height:1.4;color:#393047}.brand b span{color:var(--purple)}.brand small{display:block;color:var(--muted);font-size:11px}.header-inner nav{display:flex;align-self:stretch;gap:34px}.nav-link{display:flex;align-items:center;position:relative;font-weight:600;color:var(--muted);font-size:14px}.nav-link.active{color:var(--purple)}.nav-link.active:after{content:'';position:absolute;bottom:0;left:6px;right:6px;height:3px;background:var(--purple);border-radius:4px 4px 0 0}.grade-label{border:1px solid #e8e1f4;background:#faf7ff;border-radius:30px;padding:7px 14px;font-size:12px;white-space:nowrap;color:#684a91}.grade-label span{color:#ad89d9;margin-left:5px}.welcome-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}.eyebrow{font-size:11px;letter-spacing:.2px;color:#8b8397;display:block;margin-bottom:5px}.welcome-row h1{font-size:25px;font-weight:750;letter-spacing:-.7px}.wave{color:#d8a34f;font-size:25px;display:inline-block;margin-right:7px}.welcome-row p{color:var(--muted);margin-top:2px;font-size:13px}.points-pill{display:flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid #eee6d3;background:#fffdf5;border-radius:14px;font-size:12px;color:#8f7547}.points-pill svg{fill:#f6c765;stroke:#d5a248}.points-pill b{font-size:18px;color:#6b542c;margin-left:3px}.hero{position:relative;display:grid;grid-template-columns:1.06fr 1fr;min-height:355px;overflow:hidden;background:#eee8fb;border:1px solid #e6ddf5;border-radius:24px;margin-bottom:24px}.hero:before{content:'';position:absolute;width:450px;height:450px;background:#e5dcf5aa;border-radius:50%;left:-150px;bottom:-340px}.hero-copy{padding:31px 38px;position:relative;z-index:1}.hero-tag{font-size:11px;display:inline-flex;align-items:center;gap:7px;color:#7154a6;border-radius:30px;background:#ffffff85;border:1px solid #ffffffa6;padding:3px 10px}.hero-tag>span{width:6px;height:6px;border-radius:50%;background:#a27ad7}.hero h2{font-size:42px;font-weight:800;line-height:1.48;letter-spacing:-1.4px;margin:12px 0 10px;color:#3e2c60}.hero h2 em{font-style:normal;color:var(--purple);position:relative;white-space:nowrap}.hero h2 em:after{content:'';position:absolute;height:5px;background:#c4b1e5;bottom:0;left:2px;right:0;border-radius:60%;transform:rotate(2deg)}.hero-copy>p{font-size:13px;line-height:1.9;color:#7b6b92;margin-bottom:20px}.button{display:inline-flex;align-items:center;justify-content:center;gap:13px;border:1px solid transparent;border-radius:11px;padding:11px 20px;font-size:13px;font-weight:700;min-height:44px;transition:background .15s,box-shadow .15s;white-space:normal}.primary{color:white;background:var(--purple);box-shadow:0 4px 0 #5132a318}.primary:hover:not(:disabled){background:var(--purple-dark);box-shadow:0 4px 12px #6846cc30}.outline{background:white;border-color:#ded7ea;color:#65567c}.outline:hover{background:#f6f2fd}.hero-footnote{font-size:10px;display:flex;align-items:center;gap:6px;color:#89799e;margin-top:12px}.hero-art{position:relative;min-height:355px;align-self:stretch;isolation:isolate}.book-mascot{width:360px;height:290px;position:absolute;left:calc(50% - 180px);top:58px;filter:drop-shadow(0 13px 8px #5a36941a)}.art-orbit{position:absolute;width:290px;height:290px;border:1px dashed #c7b6e4;border-radius:50%;top:36px;left:calc(50% - 145px);transform:rotate(-25deg)}.art-orbit:before{content:'';position:absolute;width:240px;height:240px;border-radius:50%;background:#e1d6f1aa;inset:24px;z-index:-1}.art-spark{position:absolute;color:#a283c9}.spark-one{font-size:36px;top:45px;right:65px;transform:rotate(12deg)}.spark-two{font-size:24px;bottom:36px;left:61px}.art-dot{position:absolute;top:128px;left:40px;border-radius:50%;width:8px;height:8px;background:#b79ad9}.floating-word{position:absolute;z-index:2;background:#fffdf9;border:1px solid #e7dcf4;box-shadow:0 10px 20px #5d3e8710;border-radius:13px;display:block;padding:8px 23px;color:#6f4fa2;text-align:center;font-weight:750;font-size:24px;line-height:1.55}.floating-word small{font-weight:400;font-size:10px;color:#b5a1c8;display:block}.word-one{top:31px;left:65px;transform:rotate(-8deg)}.word-two{bottom:47px;right:13px;transform:rotate(7deg);color:#388679}.word-two span{position:absolute;color:#e7b45e;left:-10px;top:-14px;font-size:26px}.word-three{top:88px;right:18px;padding:6px 12px;font-size:17px;transform:rotate(8deg);background:#f9f5ff}.word-three i{font-style:normal;color:#b7a2d2;font-size:13px}.overview{background:#fff;border:1px solid var(--line);border-radius:17px;display:flex;align-items:center;padding:20px 25px;margin-bottom:36px;gap:28px;box-shadow:var(--shadow)}.overview-title{display:flex;align-items:center;gap:12px;flex:1.35}.overview-icon{display:grid;place-items:center;background:#f4f0fb;color:#9477b9;border-radius:12px;width:42px;height:42px}.overview-title b{font-size:12px;display:block}.overview-title small{font-size:10px;color:#96909f;display:block}.overview-stat{display:flex;flex-direction:column;border-right:1px solid var(--line);padding-right:28px;text-align:center;min-width:110px}.overview-stat>b{font-size:23px;font-family:var(--font);line-height:1.5;color:#514063}.overview-stat b small{font-size:12px;color:#b5aabd;font-weight:400}.overview-stat>span{font-size:10px;color:#8e8697}.overall-progress{min-width:168px;flex:.7;border-right:1px solid var(--line);padding-right:28px}.overall-progress>div:first-child{display:flex;justify-content:space-between;font-size:10px;margin-bottom:10px;color:#8c8198}.overall-progress b{color:var(--purple);font-size:12px}.progress-track{height:6px;border-radius:8px;background:#eeeaf4;overflow:hidden}.progress-track>span{display:block;height:100%;background:var(--purple);border-radius:8px;transition:width .3s}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:19px}.section-heading h2{font-size:22px;letter-spacing:-.6px}.soft-label{font-size:11px;color:#8b8494;display:flex;align-items:center;gap:7px}.station-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.station-card{--accent:var(--purple);--tint:#f3eefb;background:white;border:1px solid #e6dfef;box-shadow:var(--shadow);border-radius:19px;padding:23px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}.station-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px #32224d0c}.station-card:before{content:'';position:absolute;top:0;right:22px;left:22px;height:3px;background:var(--accent);border-radius:0 0 8px 8px;opacity:.6}.teal{--accent:var(--teal);--tint:#eaf6f2}.orange{--accent:var(--orange);--tint:#fcf2e6}.purple{--accent:var(--purple);--tint:#f3eefb}.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.station-symbol{display:inline-flex;align-items:center;justify-content:center;min-width:55px;height:55px;padding:0 8px;background:var(--tint,#f3eefb);color:var(--accent,var(--purple));border:1px solid color-mix(in srgb,var(--accent,var(--purple)) 13%,transparent);border-radius:16px;font-size:25px;font-weight:bold;line-height:1.2}.station-number{font-size:10px;color:#9b929e}.card-subtitle{font-size:10px;color:#9a92a0;display:block;margin-bottom:3px}.station-card h3{font-size:20px;font-weight:750;letter-spacing:-.5px}.formula{margin-top:10px;margin-bottom:22px;font-size:14px;font-weight:600;color:var(--accent);background:var(--tint);border-radius:7px;padding:7px 9px;text-align:center}.card-progress-label{display:flex;justify-content:space-between;font-size:10px;margin-bottom:7px;color:#9a92a0}.card-progress-label b{color:var(--accent);font-weight:500}.station-card .progress-track{height:5px;background:var(--tint)}.station-card .progress-track>span{background:var(--accent)}.card-actions{display:flex;align-items:center;gap:14px;margin-top:20px}.station-button{background:var(--tint,#f3eefb);color:var(--accent,var(--purple));border-color:color-mix(in srgb,var(--accent,var(--purple)) 10%,transparent);flex:1;padding:9px 13px;font-size:12px;justify-content:space-between}.station-button:hover{filter:brightness(.97)}.practice-link,.text-button{background:none;border:0;padding:8px 1px;color:var(--purple);font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px}.practice-link{color:var(--accent)}.practice-link:hover,.text-button:hover{text-decoration:underline}.bottom-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;margin-top:26px}.adaptive-note{display:flex;align-items:center;gap:14px;background:#f1eee7;border:1px solid #eae4da;border-radius:16px;padding:20px}.note-icon{color:#ae9665;display:flex;align-items:center}.adaptive-note h3,.achievement-preview h3{font-size:13px}.adaptive-note p,.achievement-preview p{font-size:10px;color:#8c8390;margin-top:4px}.adaptive-note .text-button{font-size:10px;white-space:nowrap;margin-right:auto}.achievement-preview{display:flex;align-items:center;gap:14px;border:1px dashed #ddd1ec;border-radius:16px;padding:20px;background:#faf7fe}.achievement-preview>span:last-child{color:#a28cb9;margin-right:auto}.mini-medal{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#f8edcd;color:#bd9240;font-size:28px;border:4px solid #f1e3bd}footer{display:flex;align-items:center;gap:18px;border-top:1px solid var(--line);max-width:1160px;width:calc(100% - 80px);margin:auto;padding:24px 0 30px;font-size:10px;color:#a39aa9}footer>span{margin-right:auto}.footer-brand{font-size:16px;color:#9c8aac;font-weight:750;letter-spacing:-.7px;font-family:'Segoe UI',Arial,sans-serif}.footer-brand span{font-size:13px;color:#ccb4db;margin-left:4px}.page-heading{padding:12px 0 30px}.page-heading h1{font-size:33px;letter-spacing:-1px;margin-bottom:8px}.page-heading>p{color:var(--muted);font-size:14px;max-width:790px}.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.guide-card{padding:26px;background:#fff;border:1px solid var(--line);border-radius:20px;display:flex;flex-direction:column;align-items:flex-start;gap:15px}.guide-card h2{font-size:20px}.guide-card>p{font-size:13px;color:#766c83;line-height:2.1}.example-list{width:100%;background:var(--tint);padding:8px 14px;border-radius:12px;color:var(--accent)}.example-list>div{display:flex;justify-content:space-between;padding:9px 0;gap:8px}.example-list>div+div{border-top:1px solid #ffffffc4}.guide-card .guide-note{font-size:11px;color:#94869c}.guide-card>.button{width:100%;margin-top:auto;flex:initial}.comparison-note{display:flex;align-items:center;gap:18px;padding:25px 28px;background:#f1ebfa;border:1px solid #e6dcf4;border-radius:17px;margin-top:26px;color:#7f5ba6}.comparison-note>div{flex:1}.comparison-note h2{font-size:17px;color:#65497e}.comparison-note p{font-size:12px;line-height:2;margin-top:5px;color:#8c7a9c}.center-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin-top:26px}.report-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.report-stats article{display:grid;grid-template-columns:40px 1fr;align-items:center;padding:22px;border-radius:16px;border:1px solid var(--line);background:white;gap:0 14px}.report-stats article>span{grid-row:span 2;display:grid;place-items:center;background:var(--lavender);color:var(--purple);width:40px;height:40px;border-radius:11px}.report-stats article>b{font-size:25px;line-height:1.5}.report-stats article>p{font-size:11px;color:var(--muted)}.report-panel{border:1px solid var(--line);border-radius:20px;padding:25px;background:white;margin-top:26px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px;text-align:right;white-space:nowrap}th,td{padding:16px 12px;border-bottom:1px solid #f0edf3}thead{color:#a195ab;background:#faf8fc}thead th{font-weight:500;font-size:11px}tbody th{font-weight:650}.table-dot{display:inline-block;width:7px;height:7px;background:var(--accent);border-radius:50%;margin-left:8px}.status-label{font-size:9px;background:#f5f0fc;color:#9277af;padding:4px 7px;border-radius:5px;margin-right:6px}.status-label.done{color:#338876;background:#ecf7f3}.report-explanation{font-size:11px;line-height:2;color:#9b8fa5;margin-top:18px;max-width:900px}.badge-section{margin-top:30px}.badge-section>h2{font-size:22px;margin-bottom:17px}.badge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.badge-card{display:flex;flex-direction:column;align-items:center;text-align:center;background:#f3f1ee;border:1px dashed #ddd8d2;border-radius:16px;padding:25px 18px}.badge-medal{font-size:36px;line-height:1.5;color:#b9b0a4;background:#e9e5df;border-radius:50%;width:60px;height:60px;display:grid;place-items:center;border:5px solid #e2ddd6;margin-bottom:13px}.badge-card h3{font-size:14px;color:#8b8191}.badge-card p{font-size:11px;color:#9b92a1;margin-top:7px}.badge-card.earned{background:#fffaf0;border:1px solid #edd8aa}.earned .badge-medal{color:#c29338;background:#f8e3a7;border-color:#edd087}.earned h3{color:#92723f}.report-tools{display:flex;align-items:center;gap:20px;margin-top:25px}.report-tools p{display:flex;align-items:center;gap:7px;font-size:11px;color:#a296ac;flex:1}.small{font-size:11px;padding:7px 12px;min-height:38px}.danger{color:#ad5a64}.danger-button{background:#ac4e60;color:white}.empty-state{padding:35px;border:1px dashed #d7c5e7;border-radius:18px;margin-top:25px;text-align:center;background:#faf6ff}.empty-state h2{font-size:19px}.empty-state p{color:var(--muted);font-size:12px;margin:10px 0 20px}
+dialog{border:1px solid #e3dbed;border-radius:24px;padding:0;width:min(690px,calc(100vw - 28px));max-height:calc(100dvh - 40px);color:var(--ink);box-shadow:0 30px 90px #2b17433d;background:#fffdfb;overflow:hidden}dialog::backdrop{background:#241b3b80;backdrop-filter:blur(5px)}#activity-content{padding:24px 32px 30px;max-height:calc(100dvh - 42px);overflow-y:auto;overscroll-behavior:contain}.modal-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.modal-top .eyebrow{margin:0}.icon-button{display:grid;place-items:center;width:38px;height:38px;padding:6px;background:transparent;border:1px solid #e6dfed;border-radius:10px;color:#9789a5;flex-shrink:0}.icon-button:hover{background:#f2edf7}.lesson-content{text-align:center}.lesson-content .station-symbol{width:70px;height:70px;font-size:32px;margin:10px 0}.lesson-content h2{font-size:29px;color:var(--accent);margin:7px 0 17px}.lesson-rule{text-align:right;font-size:16px;line-height:2.2;color:#6f627b}.lesson-examples{display:flex;gap:12px;margin:22px 0}.lesson-examples>div{display:flex;flex-direction:column;align-items:center;flex:1;gap:6px;border-radius:15px;padding:16px;background:var(--tint);color:var(--accent)}.lesson-examples>div>span:nth-child(2){transform:rotate(-90deg);color:#baabc6}.lesson-examples strong{font-size:19px}.lesson-tip{display:flex;align-items:flex-start;gap:12px;background:#f7f3eb;border:1px solid #eee6d7;border-radius:12px;padding:16px;color:#9c8057;text-align:right}.lesson-tip p{font-size:13px;line-height:2;color:#8c7b64}.lesson-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:25px}#activity-title:focus{outline:none}.question-meta{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#9c8da7;margin:5px 0 12px}.level-pill{background:#f0eafa;color:#967bb4;padding:3px 10px;border-radius:20px}.question-progress{height:5px;margin-bottom:26px}.question-kind{font-size:11px;color:#9673bd;background:#f5effc;border-radius:6px;padding:3px 8px;display:inline-block;margin-bottom:10px}.question-content h2{font-size:24px;line-height:1.9;margin-bottom:23px}.answer-options{display:flex;flex-direction:column;gap:11px;margin:18px 0}.answer-option{display:flex;align-items:center;text-align:right;gap:13px;background:white;border:1px solid #e5dfea;padding:13px 17px;border-radius:13px;color:#5b4c6c;min-height:62px;transition:border-color .15s,background .15s;font-size:16px;line-height:1.9}.answer-option:hover:not(:disabled){background:#faf6ff;border-color:#bea8dd}.option-marker{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;background:#f4f0f7;border-radius:8px;font-size:12px;color:#b29fc1}.option-check{margin-right:auto;opacity:0;color:var(--purple)}.answer-option.selected{background:#f4eefc;border-color:var(--purple);box-shadow:0 0 0 1px var(--purple)}.selected .option-check{opacity:1}.selected .option-marker{color:white;background:var(--purple)}.answer-option.correct-answer{background:#eff9f2;border-color:#5ba87c;color:#3c8158;box-shadow:none}.answer-option.correct-answer .option-check{opacity:1;color:#39824f}.answer-option.wrong-answer{background:#fff3f1;border-color:#d6a49b;box-shadow:none}.wrong-answer .option-check{opacity:0}.drag-token{background:#ede5fb;color:#6c4d96;border:1px dashed #bfa8dd;border-radius:10px;padding:10px 26px;font-size:25px;text-align:center;font-weight:700;cursor:grab;width:max-content;margin:10px auto 18px}.drag-token:active{cursor:grabbing}.drag-instruction{font-size:12px;color:#9b8ba8}.sort-options{flex-direction:row}.sort-options .answer-option{flex:1;flex-direction:column;justify-content:center;text-align:center;position:relative;gap:8px;padding:14px 10px;font-size:14px;min-height:117px}.sort-options .option-check{position:absolute;left:10px;top:5px}.sort-options .option-marker{display:none}.answer-option.drag-over{background:#e8def8;border:2px dashed var(--purple)}.question-actions{display:flex;align-items:center;gap:16px;margin-top:23px}.question-actions>.text-button{font-size:11px;margin-right:auto}.question-actions>.audio-button{margin-right:auto}.question-actions>.text-button+.audio-button{margin-right:0}.question-reassurance{text-align:center;font-size:10px;color:#b3a5bd;margin-top:17px}.hint-box{padding:13px 16px;border-radius:12px;background:#fff8e8;border:1px solid #efe1bf;color:#9b814d;font-size:13px;margin:16px 0}.hint-box b{font-size:13px;color:#8d7136}.hint-box p{margin-top:5px;line-height:2}.hint-box small{font-size:10px;display:block;margin-top:5px;color:#ab9464}.feedback{border-radius:12px;padding:15px 18px;font-size:13px;line-height:2;margin-top:18px}.feedback b{font-size:14px;display:block;margin-bottom:4px}.feedback.positive{background:#eff8f1;color:#4a835d;border:1px solid #d6eadb}.feedback.retry{background:#fff6e9;color:#a08048;border:1px solid #f0dfbf}.support-box{border-radius:12px;background:#f5effb;padding:14px 17px;font-size:12px;line-height:2;color:#8c74a4;margin-bottom:20px}.support-box b{display:block;color:#77539c;margin-bottom:3px}.session-summary{text-align:center}.summary-medal{display:grid;place-items:center;width:90px;height:90px;border-radius:50%;background:#f7e7ba;color:#c49b4e;border:8px solid #f0d99e;font-size:55px;line-height:1;margin:8px auto 18px;box-shadow:0 0 0 8px #fcf5e5}.session-summary h2{font-size:28px;margin-bottom:12px}.session-summary>p{font-size:13px;line-height:2;color:#95829f}.summary-numbers{display:flex;gap:20px;justify-content:center;margin:25px 0}.summary-numbers>div{background:#f3eefb;border-radius:14px;min-width:160px;padding:17px;color:#8366a7}.summary-numbers b{display:block;font-size:29px;color:#7753a4}.summary-numbers span{font-size:11px}.summary-skills{text-align:right;margin:15px 0;border:1px solid #eae2f0;border-radius:12px;overflow:hidden}.summary-skills>div{display:flex;justify-content:space-between;padding:12px 17px;font-size:12px;color:#9782aa}.summary-skills>div+div{border-top:1px solid #eee6f3}.summary-skills b{color:#755495}.summary-recommendation{text-align:right;padding:16px 19px;background:#faf6ef;border-radius:12px}.summary-recommendation b{font-size:13px;color:#91734a}.summary-recommendation p{font-size:11px;color:#a78e6e;margin-top:5px}.reset-content{padding:15px 0}.reset-content h2{font-size:23px}.reset-content>p{font-size:14px;color:#95829f;line-height:2;margin-top:15px}#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);max-width:min(540px,calc(100% - 32px));border-radius:13px;padding:13px 23px;background:#463257;color:#fff;box-shadow:0 8px 40px #35204533;font-size:13px;line-height:1.9;z-index:20;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}#toast.show{opacity:1;transform:translate(-50%,0)}.skip-link{position:fixed;top:-100px;right:20px;z-index:30;padding:10px 20px;background:var(--purple);color:white;border-radius:0 0 10px 10px}.skip-link:focus{top:0}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(min-width:1400px){main{padding-top:44px}.hero{min-height:378px}.hero h2{font-size:46px}.hero-copy{padding-top:35px}.hero-art{min-height:378px}.book-mascot{top:67px}}
+@media(max-width:1050px){main{width:calc(100% - 48px)}.header-inner{padding:0 24px;gap:20px}.header-inner nav{gap:23px}.brand b{font-size:21px}.grade-label{font-size:10px;padding:5px 9px}.hero-copy{padding:28px}.hero h2{font-size:37px}.hero-copy>p{font-size:12px}.floating-word.word-three{right:0}.spark-one{right:37px}.book-mascot{width:320px;left:calc(50% - 160px)}.word-one{left:28px}.word-two{right:0}.overview{gap:20px;padding:18px}.overview-stat{padding-right:18px;min-width:90px}.overview-title{gap:9px}.overall-progress{padding-right:18px;min-width:140px}.station-grid{gap:15px}.station-card{padding:20px 16px}.station-card h3{font-size:18px}.formula{font-size:12px}.adaptive-note{flex-wrap:wrap;gap:11px;padding:17px}.adaptive-note>div{flex:1}.adaptive-note .text-button{padding:0;margin-right:38px;min-height:25px}.achievement-preview{padding:17px;gap:10px}footer{width:calc(100% - 48px)}.guide-card{padding:20px}.guide-card h2{font-size:18px}.report-stats article{padding:17px;gap:0 10px}.report-stats article>b{font-size:22px}}
+@media(max-width:800px){.header-inner{flex-wrap:wrap;min-height:100px;padding-top:15px;gap:5px 15px}.brand{gap:8px}.brand-icon{width:36px;height:36px;font-size:23px;border-radius:12px 12px 5px 12px}.brand b{font-size:21px}.brand small{font-size:9px}.header-inner nav{order:3;width:100%;justify-content:center;gap:40px;min-height:49px}.nav-link{font-size:12px}.grade-label{margin-right:auto}.welcome-row h1{font-size:23px}.hero{min-height:340px;grid-template-columns:1.1fr 1fr}.hero h2{font-size:33px}.hero-copy{padding:24px}.hero-tag{font-size:9px}.hero-copy>p{font-size:11px}.hero-art{min-height:340px}.book-mascot{width:290px;left:calc(50% - 145px);top:65px}.art-orbit{width:240px;height:240px;left:calc(50% - 120px);top:52px}.art-orbit:before{width:200px;height:200px;inset:19px}.floating-word{font-size:21px;padding:6px 17px}.word-one{left:30px;top:47px}.word-two{bottom:51px;right:9px}.word-three{font-size:14px;top:100px;right:0}.spark-one{right:20px;top:25px;font-size:25px}.spark-two{left:20px}.hero-footnote{font-size:9px}.overview{flex-wrap:wrap;gap:20px 0}.overview-title{flex:1;min-width:50%}.overview-stat{border:0;padding:0;min-width:23%}.overall-progress{flex-basis:100%;padding:0;border:0;display:flex;align-items:center;gap:16px}.overall-progress>div:first-child{min-width:120px;margin:0}.overall-progress>.progress-track{flex:1}.station-grid{grid-template-columns:1fr}.station-card{display:grid;grid-template-columns:1fr 1fr;padding:22px;gap:0 25px}.card-top{grid-row:span 3;grid-column:2;justify-content:flex-end;align-items:flex-start;gap:15px;flex-direction:row-reverse;margin:0}.station-symbol{width:65px;height:65px;font-size:30px}.station-number{margin-top:23px}.card-subtitle{grid-column:1}.station-card h3{grid-column:1;font-size:22px}.formula{grid-column:1;font-size:14px;margin:9px 0 18px;padding:5px 8px}.card-progress-label{grid-column:2;grid-row:4}.station-card>.progress-track{grid-column:2;grid-row:5;margin-top:0}.card-actions{grid-column:1;grid-row:4 / 6;margin:0;gap:15px}.bottom-grid{grid-template-columns:1fr 1fr}.adaptive-note{display:block}.note-icon{float:right;margin-left:10px;margin-top:3px}.adaptive-note .text-button{margin:10px 0 0}.achievement-preview{align-items:flex-start}.mini-medal{flex-shrink:0}.achievement-preview>span:last-child{display:none}.guide-grid{grid-template-columns:1fr}.guide-card{display:grid;grid-template-columns:80px 1fr;gap:15px}.guide-card .station-symbol{grid-row:span 2}.guide-card h2{font-size:22px}.guide-card>p{font-size:14px}.guide-card .example-list,.guide-card .guide-note,.guide-card>.button{grid-column:1 / -1}.example-list{display:flex;justify-content:space-around;padding:10px;gap:20px}.example-list>div{gap:12px}.example-list>div+div{border:0}.report-stats{grid-template-columns:1fr 1fr}.report-stats article{padding:20px}.badge-grid{gap:12px}.badge-card{padding:20px 10px}.badge-card h3{font-size:11px}.badge-card p{font-size:10px}.report-tools{flex-wrap:wrap;gap:10px 20px}.report-tools p{flex-basis:100%}.comparison-note{flex-wrap:wrap;gap:12px;padding:22px}.comparison-note>.button{margin-right:38px}.report-panel{padding:20px}footer{gap:12px;flex-wrap:wrap}footer p{font-size:9px}footer>span{font-size:9px}}
+@media(max-width:560px){main{width:calc(100% - 32px);padding-top:25px}.header-inner{padding:13px 16px 0}.header-inner nav{gap:29px}.nav-link{font-size:11px}.welcome-row{margin-bottom:22px;align-items:flex-start}.eyebrow{font-size:9px}.welcome-row h1{font-size:19px;letter-spacing:-.5px}.welcome-row p{font-size:11px}.wave{font-size:18px;margin-right:2px}.points-pill{padding:5px 9px;gap:5px;border-radius:10px;font-size:0}.points-pill b{font-size:17px;margin:0}.points-pill svg{width:17px;height:17px}.hero{display:flex;flex-direction:column;min-height:auto;border-radius:20px}.hero-copy{padding:25px 25px 0}.hero h2{font-size:38px;line-height:1.5;margin-top:14px}.hero h2 br{display:none}.hero-copy>p{font-size:12px;margin:12px 0 20px}.hero .button{font-size:12px;padding:11px 17px}.hero-footnote{font-size:10px;margin-top:13px}.hero-art{min-height:245px;margin-top:-2px;width:100%;max-width:370px;align-self:center}.book-mascot{width:285px;height:235px;top:9px;left:calc(50% - 142px)}.art-orbit{width:215px;height:215px;top:10px;left:calc(50% - 107px)}.art-orbit:before{width:180px;height:180px;inset:17px}.word-one{top:1px;left:40px;font-size:19px}.word-two{bottom:22px;right:28px;font-size:20px}.word-three{right:14px;top:38px}.spark-one{top:10px;right:70px}.spark-two{bottom:25px;left:40px}.art-dot{left:50px;top:100px}.overview{border-radius:15px;padding:16px;margin-bottom:28px;gap:17px 0}.overview-title{flex-basis:100%;gap:9px}.overview-icon{width:36px;height:36px}.overview-title b{font-size:12px}.overview-title small{font-size:10px}.overview-stat{min-width:50%;border-right:0;align-items:flex-start;text-align:right;padding:0 10px;position:relative}.overview-stat:before{content:'';position:absolute;right:0;height:34px;top:6px;width:2px;background:#e3daf1;border-radius:4px}.overview-stat>b{font-size:22px}.overall-progress{padding-top:13px;border-top:1px solid #f3eff7;gap:16px}.overall-progress>div:first-child{min-width:110px}.overall-progress>.progress-track{height:5px}.section-heading{align-items:flex-start}.section-heading h2{font-size:20px}.soft-label{font-size:9px;margin-top:20px;gap:4px}.soft-label svg{width:13px}.station-grid{gap:16px}.station-card{display:block;padding:22px}.card-top{flex-direction:row;align-items:center;justify-content:space-between;margin-bottom:12px}.station-number{margin:0;font-size:11px}.station-symbol{width:55px;height:55px;font-size:27px}.card-subtitle{font-size:11px}.station-card h3{font-size:23px}.formula{font-size:15px;padding:8px;margin:12px 0 20px}.card-progress-label{font-size:11px;margin-bottom:9px}.card-actions{margin-top:20px;gap:23px}.station-button{padding:10px 16px;font-size:12px}.bottom-grid{grid-template-columns:1fr;gap:14px;margin-top:20px}.adaptive-note{padding:20px}.adaptive-note h3,.achievement-preview h3{font-size:14px}.adaptive-note p,.achievement-preview p{font-size:11px;line-height:2}.adaptive-note .text-button{font-size:11px}.achievement-preview{padding:20px;align-items:center}.achievement-preview>span:last-child{display:block}.page-heading{padding-top:5px}.page-heading h1{font-size:28px}.page-heading>p{font-size:12px}.guide-card{grid-template-columns:60px 1fr;gap:12px;padding:21px}.guide-card .station-symbol{width:50px;height:50px;min-width:50px;font-size:24px}.guide-card h2{font-size:20px}.guide-card>p{font-size:13px;grid-column:1 / -1}.example-list{gap:9px;flex-wrap:wrap}.example-list>div{font-size:13px;gap:7px;padding:6px 0}.guide-card .guide-note{font-size:12px}.comparison-note{padding:20px;gap:12px;align-items:flex-start}.comparison-note h2{font-size:15px}.comparison-note p{font-size:11px}.comparison-note>svg{width:22px;margin-top:3px}.comparison-note .button{font-size:11px;margin-right:34px;padding:9px 14px}.center-actions{gap:10px}.center-actions .button{font-size:12px;padding:10px 14px}.report-stats{gap:12px}.report-stats article{padding:14px;grid-template-columns:30px 1fr;gap:0 10px;border-radius:13px}.report-stats article>span{width:30px;height:30px;border-radius:8px}.report-stats article>span svg{width:19px}.report-stats article>b{font-size:21px}.report-stats article>p{font-size:9px}.report-panel{padding:17px}.report-panel h2{font-size:20px}.report-panel .eyebrow{font-size:9px}.report-explanation{font-size:10px}.badge-grid{grid-template-columns:1fr}.badge-card{flex-direction:row;flex-wrap:wrap;gap:0 15px;text-align:right;padding:17px}.badge-medal{width:46px;height:46px;font-size:27px;float:right;margin:0;flex-shrink:0;grid-row:span 2}.badge-card{display:grid;grid-template-columns:46px 1fr}.badge-card h3{font-size:13px}.badge-card p{margin:0;font-size:10px}.report-tools{gap:8px 16px}.report-tools p{font-size:10px}.empty-state{padding:25px 17px}.empty-state h2{font-size:17px}footer{width:calc(100% - 32px);padding:20px 0;gap:8px 16px}footer p{order:3;width:100%}dialog{border-radius:19px;max-height:calc(100dvh - 24px)}#activity-content{padding:17px 20px 25px;max-height:calc(100dvh - 26px)}.modal-top{margin-bottom:10px}.modal-top .eyebrow{font-size:10px}.lesson-content h2{font-size:24px}.lesson-rule{font-size:14px;line-height:2.2}.lesson-examples{gap:8px}.lesson-examples>div{padding:11px 7px;font-size:12px;border-radius:11px}.lesson-examples strong{font-size:15px}.lesson-tip{padding:12px;gap:10px}.lesson-tip p{font-size:12px}.lesson-actions{gap:9px}.lesson-actions .button{font-size:12px;padding:11px 13px}.question-content h2{font-size:20px;margin-bottom:17px}.question-progress{margin-bottom:20px}.answer-option{font-size:14px;padding:12px;gap:10px}.option-marker{width:26px;height:26px;font-size:11px}.sort-options{gap:8px}.sort-options .answer-option{font-size:12px;padding:12px 6px;min-height:92px}.question-actions{gap:10px;flex-wrap:wrap}.question-actions>.button{font-size:12px;padding:11px 14px}.question-actions>.text-button{font-size:10px}.audio-button{width:34px;height:34px}.audio-button svg{width:19px}.question-reassurance{font-size:9px}.feedback{padding:12px;font-size:12px}.feedback b{font-size:13px}.session-summary h2{font-size:23px}.session-summary>p{font-size:12px}.summary-numbers{gap:12px;margin:20px 0}.summary-numbers>div{min-width:0;flex:1;padding:13px}.summary-numbers b{font-size:26px}.summary-numbers span{font-size:10px}.summary-skills>div{font-size:11px;padding:12px}.summary-recommendation{padding:13px}.summary-recommendation b{font-size:12px}.summary-recommendation p{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.station-card:hover{transform:none}}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#journey" class="brand" aria-label="PluralQuest — الصفحة الرئيسية"><span class="brand-icon" aria-hidden="true">جـ</span><span><b lang="en" dir="ltr">Plural<span>Quest</span></b><small>كل كلمة… بداية مغامرة</small></span></a>
+      <nav aria-label="التنقل الرئيسي">
+        <a href="#journey" data-nav="journey" class="nav-link active">رحلتي التعليمية</a>
+        <a href="#guide" data-nav="guide" class="nav-link">دليل الجموع</a>
+        <a href="#report" data-nav="report" class="nav-link">لوحة التقدّم</a>
+      </nav>
+      <div class="grade-label"><span aria-hidden="true">✦</span> الصف الخامس</div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer><a class="footer-brand" href="#journey" lang="en" dir="ltr">PluralQuest<span>✦</span></a><p>نتعلّم بخطوات صغيرة، ونكبر مع كل محاولة.</p><span>اللغة العربية · الصف الخامس</span></footer>
+  <dialog id="activity" aria-labelledby="activity-title"><div id="activity-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script>
+(() => {
+'use strict';
+const SKILLS = [
+  { id: 'masculine', title: 'جمع المذكر السالم', short: 'المذكر السالم', color: 'purple', symbol: 'ونَ', number: '١', subtitle: 'المفرد يبقى… ونضيف إليه', rule: 'يدلّ على ثلاثة فأكثر، وتبقى صورة مفرده سالمة من التغيير. نضيف واوًا ونونًا في حالة الرفع، وياءً ونونًا في حالتي النصب والجر. وتكون نون الجمع مفتوحة.', formula: 'معلّم ← معلّمونَ / معلّمينَ', examples: [['معلّم', 'معلّمونَ'], ['مهندس', 'مهندسونَ'], ['لاعب', 'لاعبونَ']], note: 'نقول: حضرَ المعلّمونَ، ورأيتُ المعلّمينَ، وسلّمتُ على المعلّمينَ. ليست كل كلمة تنتهي بـ«ون» جمع مذكر سالمًا؛ نبحث عن مفردها أيضًا.', tip: 'ابحث عن المفرد: هل بقيت حروفه كما هي، وأُضيفت «ون» أو «ين»؟' },
+  { id: 'feminine', title: 'جمع المؤنث السالم', short: 'المؤنث السالم', color: 'teal', symbol: 'ات', number: '٢', subtitle: 'ألف وتاء… وجمع جديد', rule: 'يدلّ على ثلاث فأكثر، ويُجمع بزيادة ألف وتاء مع بقاء حروف المفرد سالمة. نحذف التاء المربوطة من المفرد عند وجودها، ثم نضيف «ات».', formula: 'معلّمة ← معلّمات', examples: [['معلّمة', 'معلّمات'], ['طبيبة', 'طبيبات'], ['ممرّضة', 'ممرّضات']], note: 'التاء المربوطة «ة» ليست هي التاء المفتوحة «ت». نكتب: مهندسة ← مهندسات. ولا يكفي آخر الكلمة وحده لتحديد نوع الجمع؛ مثل «أبيات» جمع تكسير ومفرده «بيت».', tip: 'جرّب إعادة الكلمة إلى مفردها. مثال: طبيبات ← طبيبة.' },
+  { id: 'broken', title: 'جمع التكسير', short: 'التكسير', color: 'orange', symbol: 'كُتُب', number: '٣', subtitle: 'تتغيّر الكلمة… ويبقى المعنى', rule: 'يدلّ على ثلاثة فأكثر، وتتغيّر صورة مفرده عند الجمع؛ فقد تتغيّر الحركات، أو تُزاد حروف، أو تُحذف حروف.', formula: 'كتاب ← كُتُب', examples: [['قلم', 'أقلام'], ['باب', 'أبواب'], ['رجل', 'رجال']], note: 'نلاحظ التغيّر: قلم ← أقلام، وكتاب ← كُتُب. نتعلّم جمع التكسير من الأمثلة والاستعمال، فلا نضيف نهاية ثابتة إلى جميع الكلمات.', tip: 'قارن المفرد بالجمع: هل تغيّرت صورة الكلمة؟ كتاب ← كُتُب.' }
+];
+
+const questions = [];
+function add(skill, level, prompt, options, answer, explanation, kind = 'choice') {
+  questions.push({ id: `${skill}-${level}-${questions.filter(q => q.skill === skill && q.level === level).length + 1}`, skill, level, prompt, options, answer, explanation, kind });
+}
+const categories = SKILLS.map(s => s.title);
+const classify = (skill, level, word, explanation) => add(skill, level, `إلى أيّ نوع من الجموع تنتمي كلمة «${word}»؟`, categories, SKILLS.find(s => s.id === skill).title, explanation, 'sort');
+[
+  ['masculine', 'معلّمون', 'مفردها معلّم. بقي المفرد سالمًا، وأُضيفت إليه واو ونون.'],
+  ['masculine', 'مهندسون', 'مهندس ← مهندسون: أُضيفت واو ونون إلى المفرد دون تغيير صورته.'],
+  ['masculine', 'لاعبين', 'لاعب ← لاعبين: نضيف ياءً ونونًا في النصب والجر.'],
+  ['feminine', 'طبيبات', 'طبيبة ← طبيبات: حُذفت التاء المربوطة وأُضيفت ألف وتاء.'],
+  ['feminine', 'معلّمات', 'معلّمة ← معلّمات: هذا جمع مؤنث سالم بالألف والتاء.'],
+  ['feminine', 'ممرّضات', 'ممرّضة ← ممرّضات: بقيت حروف المفرد، وحلّت «ات» محلّ التاء المربوطة.'],
+  ['broken', 'أقلام', 'قلم ← أقلام: تغيّرت صورة المفرد، فهو جمع تكسير.'],
+  ['broken', 'كُتُب', 'كتاب ← كُتُب: تغيّرت الحركات وحُذفت الألف.'],
+  ['broken', 'رجال', 'رجل ← رجال: تغيّرت صورة المفرد بزيادة الألف.']
+].forEach(([s, w, e]) => classify(s, 1, w, e));
+[
+  ['masculine', 'معلّم', ['معلّمون', 'معلّمات', 'معالم'], 'معلّمون'],
+  ['masculine', 'مهندس', ['مهندسون', 'مهندسات', 'هندسة'], 'مهندسون'],
+  ['masculine', 'فائز', ['فائزون', 'فائزات', 'فوز'], 'فائزون'],
+  ['feminine', 'مهندسة', ['مهندسون', 'مهندسات', 'هندسة'], 'مهندسات'],
+  ['feminine', 'لاعبة', ['لاعبات', 'لاعبون', 'ألعاب'], 'لاعبات'],
+  ['feminine', 'طالبة', ['طالبات', 'طلاب', 'طالبون'], 'طالبات'],
+  ['broken', 'باب', ['بابات', 'أبواب', 'بابون'], 'أبواب'],
+  ['broken', 'قلم', ['قلمون', 'قلمات', 'أقلام'], 'أقلام'],
+  ['broken', 'كتاب', ['كتابون', 'كُتُب', 'كتابات'], 'كُتُب']
+].forEach(([s, w, o, a]) => add(s, 1, `اختر الجمع المناسب لكلمة «${w}».`, o, a, `${w} ← ${a}. ${SKILLS.find(x => x.id === s).tip}`, 'match'));
+
+[
+  ['masculine', 'اختر زوج المفرد والجمع الصحيح.', ['مسافر ← مسافرون', 'مسافر ← مسافرات', 'مسافر ← سفر'], 'مسافر ← مسافرون', 'بقيت حروف «مسافر» كما هي، وأُضيفت إليها واو ونون.'],
+  ['masculine', 'ما مفرد كلمة «عاملين»؟', ['عامل', 'عمل', 'عاملة'], 'عامل', 'نحذف ياء الجمع ونونه، فنحصل على «عامل».'],
+  ['masculine', 'أيّ مجموعة كلّها جمع مذكر سالم؟', ['معلّمون، لاعبون، فائزون', 'معلّمات، لاعبات، فائزات', 'رجال، كتب، أقلام'], 'معلّمون، لاعبون، فائزون', 'مفرداتها: معلّم، ولاعب، وفائز. أُضيفت «ون» إلى كل منها.'],
+  ['masculine', 'ماذا نضيف إلى المفرد في جمع المذكر السالم؟', ['ون أو ين', 'ات فقط', 'ألفًا في بدايته دائمًا'], 'ون أو ين', 'نضيف «ون» في الرفع و«ين» في النصب والجر.'],
+  ['masculine', 'ما حركة نون جمع المذكر السالم؟', ['الفتحة', 'الضمة', 'الكسرة'], 'الفتحة', 'نون جمع المذكر السالم مفتوحة: المعلّمونَ، المعلّمينَ.'],
+  ['masculine', 'اختر جمع «مزارع» في حالة الرفع.', ['مزارعون', 'مزارعين', 'مزارعات'], 'مزارعون', 'في حالة الرفع نزيد واوًا ونونًا: مزارعون.'],
+  ['feminine', 'ما الخطوة الصحيحة لجمع «ممرّضة»؟', ['حذف ة وإضافة ات', 'إضافة ات بعد ة', 'حذف أول حرف'], 'حذف ة وإضافة ات', 'ممرّضة ← ممرّضات. نحذف التاء المربوطة قبل إضافة الألف والتاء.'],
+  ['feminine', 'ما مفرد كلمة «مهندسات»؟', ['مهندسة', 'مهندس', 'هندسة'], 'مهندسة', 'مهندسة هي مفرد مهندسات؛ نعيد التاء المربوطة.'],
+  ['feminine', 'أيّ مجموعة كلّها جمع مؤنث سالم؟', ['طبيبات، معلّمات، ممرّضات', 'أقلام، أبواب، كتب', 'مهندسون، لاعبون، معلّمون'], 'طبيبات، معلّمات، ممرّضات', 'كل كلمة جُمعت بزيادة ألف وتاء مع حذف التاء المربوطة من مفردها.'],
+  ['feminine', 'اختر الكتابة الصحيحة لجمع «كاتبة».', ['كاتبات', 'كاتبةات', 'كاتبون'], 'كاتبات', 'نحذف «ة» ثم نضيف «ات»: كاتبة ← كاتبات.'],
+  ['feminine', 'ما الحرفان اللذان نزيدهما في جمع المؤنث السالم؟', ['ألف وتاء', 'واو ونون', 'ياء ونون'], 'ألف وتاء', 'نجمع معلّمة على معلّمات بزيادة ألف وتاء.'],
+  ['feminine', 'اختر زوج المفرد والجمع الصحيح.', ['فائزة ← فائزات', 'فائزة ← فائزون', 'فائزة ← فوز'], 'فائزة ← فائزات', 'حذفنا التاء المربوطة وأضفنا «ات».'],
+  ['broken', 'أيّ زوج تغيّرت فيه صورة المفرد عند الجمع؟', ['رجل ← رجال', 'معلّم ← معلّمون', 'طبيبة ← طبيبات'], 'رجل ← رجال', 'زادت ألف في داخل الكلمة، فتغيّرت صورة المفرد.'],
+  ['broken', 'ما مفرد كلمة «مدارس»؟', ['مدرسة', 'مدرّس', 'درس'], 'مدرسة', 'مدرسة ← مدارس؛ تغيّرت صورة الكلمة، فهذا جمع تكسير.'],
+  ['broken', 'أيّ مجموعة كلّها جمع تكسير؟', ['أقلام، كتب، أبواب', 'معلّمون، لاعبون، فائزون', 'طبيبات، كاتبات، طالبات'], 'أقلام، كتب، أبواب', 'مفرداتها قلم وكتاب وباب، وقد تغيّرت صورها عند الجمع.'],
+  ['broken', 'ما الذي يميّز جمع التكسير؟', ['تغيّر صورة المفرد', 'إضافة ون دائمًا', 'إضافة ات دائمًا'], 'تغيّر صورة المفرد', 'لا نعتمد نهاية ثابتة، بل نلاحظ التغيّر في بنية الكلمة.'],
+  ['broken', 'اختر الجمع الصحيح لكلمة «طفل».', ['أطفال', 'طفلون', 'طفلات'], 'أطفال', 'طفل ← أطفال: تغيّرت صورة المفرد بزيادة حروف.'],
+  ['broken', 'ما مفرد كلمة «أشجار»؟', ['شجرة', 'شجرات', 'شجيرة'], 'شجرة', 'شجرة ← أشجار، وهذا جمع تكسير.']
+].forEach(([s, p, o, a, e]) => add(s, 2, p, o, a, e));
+
+[
+  ['masculine', 'أكمل: حضرَ … إلى المدرسة.', ['المعلّمونَ', 'المعلّمينَ', 'المعلّمَ'], 'المعلّمونَ', 'المعلّمونَ فاعل مرفوع؛ لذلك نستخدم الواو والنون.'],
+  ['masculine', 'أكمل: شجّعتُ … في المباراة.', ['اللاعبينَ', 'اللاعبونَ', 'اللاعبُ'], 'اللاعبينَ', 'اللاعبينَ مفعول به منصوب؛ لذلك نستخدم الياء والنون.'],
+  ['masculine', 'أكمل: سلّمتُ على … .', ['المهندسينَ', 'المهندسونَ', 'المهندسُ'], 'المهندسينَ', 'الكلمة بعد «على» مجرورة؛ فنستخدم جمع المذكر السالم بالياء والنون.'],
+  ['masculine', 'اختر الجملة الصحيحة.', ['نجحَ المجتهدونَ.', 'نجحَ المجتهدينَ.', 'نجحَ المجتهداتِ.'], 'نجحَ المجتهدونَ.', 'المجتهدونَ فاعل مرفوع بالواو لأنه جمع مذكر سالم.'],
+  ['masculine', 'ما سبب استخدام «ين» في: شكرتُ المتطوّعينَ؟', ['لأن الجمع منصوب', 'لأن الجمع مرفوع', 'لأن الكلمة مفردة'], 'لأن الجمع منصوب', 'المتطوّعينَ مفعول به منصوب، وعلامة نصبه الياء.'],
+  ['masculine', 'أيّ كلمة جمع مذكر سالم؟ فكّر في المفرد أيضًا.', ['صائمون', 'عيون', 'غصون'], 'صائمون', 'مفردها صائم وأُضيفت «ون». أمّا عيون وغصون فمفرداهما عين وغصن، وهما جمعا تكسير.'],
+  ['feminine', 'أكمل بجمع «طبيبة»: تعملُ … في المستشفى.', ['الطبيباتُ', 'الطبيبةاتُ', 'الطبيبونَ'], 'الطبيباتُ', 'طبيبة ← طبيبات: نحذف التاء المربوطة ثم نضيف ألفًا وتاءً.'],
+  ['feminine', 'أيّ كلمة جمع مؤنث سالم؟ فكّر في المفرد أيضًا.', ['معلّمات', 'أبيات', 'أوقات'], 'معلّمات', 'معلّمة ← معلّمات جمع مؤنث سالم، لكن بيت ← أبيات ووقت ← أوقات جمعا تكسير.'],
+  ['feminine', 'صحّح الجمع في: قرأتُ قصصًا كتبتها «كاتبةات».', ['كاتبات', 'كاتبون', 'كتابات'], 'كاتبات', 'نحذف التاء المربوطة من «كاتبة» قبل إضافة «ات».'],
+  ['feminine', 'أكمل بجمع «متطوّعة»: شاركتِ … في تنظيف الحديقة.', ['المتطوّعاتُ', 'المتطوّعةاتُ', 'المتطوّعونَ'], 'المتطوّعاتُ', 'متطوّعة ← متطوّعات؛ جمع مؤنث سالم.'],
+  ['feminine', 'أيّ كلمة هي جمع «مكتبة» جمع مؤنث سالمًا؟', ['مكتبات', 'مكاتب', 'كاتبون'], 'مكتبات', 'مكتبة ← مكتبات. أمّا مكاتب فهو جمع مكتب.'],
+  ['feminine', 'لماذا «مهندسات» جمع مؤنث سالم؟', ['لزيادة ألف وتاء مع سلامة حروف المفرد', 'لأن كل كلمة تنتهي بتاء جمع مؤنث سالم', 'لإضافة واو ونون'], 'لزيادة ألف وتاء مع سلامة حروف المفرد', 'المفرد مهندسة؛ نحذف التاء المربوطة ونضيف ألفًا وتاءً، وتبقى حروف المفرد سالمة.'],
+  ['broken', 'أكمل بجمع «باب»: فتحتُ … الصفوف.', ['أبوابَ', 'باباتِ', 'بابونَ'], 'أبوابَ', 'باب ← أبواب: تغيّرت صورة المفرد، فهو جمع تكسير.'],
+  ['broken', 'أيّ كلمة جمع تكسير رغم انتهائها بـ«ات»؟', ['أبيات', 'معلّمات', 'مهندسات'], 'أبيات', 'مفرد أبيات هو بيت. تغيّرت صورة المفرد، ولا تكفي النهاية وحدها للحكم على نوع الجمع.'],
+  ['broken', 'في جملة «على الرفّ كتبٌ كثيرةٌ»، ما نوع «كتب»؟', categories, 'جمع التكسير', 'مفردها كتاب؛ تغيّرت الحركات وحُذفت الألف عند الجمع.'],
+  ['broken', 'اختر الجملة التي تتضمّن جمع تكسير.', ['رأيتُ أطفالًا في الحديقة.', 'حضرَ المعلّمونَ.', 'شاركتِ الطالباتُ.'], 'رأيتُ أطفالًا في الحديقة.', 'طفل ← أطفال جمع تكسير؛ لأن صورة المفرد تغيّرت.'],
+  ['broken', 'ما نوع «عيون» إذا كان مفردها «عين»؟', categories, 'جمع التكسير', 'عين ← عيون: تغيّرت صورة المفرد. انتهاء الكلمة بواو ونون لا يجعلها جمع مذكر سالمًا.'],
+  ['broken', 'أيّ زوج يمثّل جمع تكسير؟', ['مدينة ← مدن', 'معلّمة ← معلّمات', 'مهندس ← مهندسون'], 'مدينة ← مدن', 'مدينة ← مدن: حُذفت حروف وتغيّرت حركات، فتغيّرت صورة المفرد.']
+].forEach(([s, p, o, a, e]) => add(s, 3, p, o, a, e));
+const QUESTIONS = questions;
+const getSkill = id => SKILLS.find(skill => skill.id === id);
+
+const STORAGE_KEY = 'pluralquest.v1';
+const createState = () => ({ version: 1, diagnosticDone: false, attempts: [], lessons: [], sessions: 0 });
+
+function validateState(value) {
+  const fresh = createState();
+  if (!value || value.version !== 1) return fresh;
+  const known = new Set(QUESTIONS.map(q => q.id));
+  fresh.attempts = (Array.isArray(value.attempts) ? value.attempts : []).filter(a => a && known.has(a.questionId) && SKILLS.some(s => s.id === a.skill) && QUESTIONS.find(q => q.id === a.questionId).skill === a.skill && typeof a.correct === 'boolean' && typeof a.hinted === 'boolean' && Number.isFinite(a.at) && ['diagnostic', 'practice'].includes(a.mode)).slice(-2000);
+  fresh.lessons = [...new Set((Array.isArray(value.lessons) ? value.lessons : []).filter(id => SKILLS.some(s => s.id === id)))];
+  fresh.diagnosticDone = value.diagnosticDone === true;
+  fresh.sessions = Number.isSafeInteger(value.sessions) && value.sessions >= 0 ? value.sessions : 0;
+  return fresh;
+}
+
+function loadState(storage) {
+  try { return validateState(JSON.parse(storage.getItem(STORAGE_KEY))); } catch { return createState(); }
+}
+function saveState(storage, state) {
+  try { storage.setItem(STORAGE_KEY, JSON.stringify(state)); return true; } catch { return false; }
+}
+function stats(state, skillId) {
+  const rows = state.attempts.filter(a => a.skill === skillId);
+  const last = rows.slice(-5);
+  const correct = rows.filter(a => a.correct && !a.hinted).length;
+  const recentCorrect = last.filter(a => a.correct && !a.hinted).length;
+  const mastery = Math.round(recentCorrect / 5 * 100);
+  return { total: rows.length, correct, mastery, mastered: last.length === 5 && recentCorrect >= 4, accuracy: rows.length ? Math.round(correct / rows.length * 100) : 0 };
+}
+function overall(state) {
+  const skills = SKILLS.map(s => stats(state, s.id));
+  return { mastery: Math.round(skills.reduce((n, s) => n + s.mastery, 0) / 3), mastered: skills.filter(s => s.mastered).length, points: state.attempts.reduce((n, a) => n + (a.correct ? a.hinted ? 5 : 10 : 0), 0), attempts: state.attempts.length };
+}
+function levelFor(state, skillId) {
+  const rows = state.attempts.filter(a => a.skill === skillId);
+  // Repeated errors always take priority over earlier success.
+  if (rows.length >= 2 && rows.slice(-2).every(a => !a.correct || a.hinted)) return 1;
+  const recent = rows.slice(-5);
+  const wins = recent.filter(a => a.correct && !a.hinted).length;
+  return wins >= 4 ? 3 : wins >= 2 ? 2 : 1;
+}
+function recommendSkill(state) {
+  return [...SKILLS].sort((a, b) => stats(state, a.id).mastery - stats(state, b.id).mastery || stats(state, a.id).total - stats(state, b.id).total)[0].id;
+}
+function needsSupport(state, skillId) {
+  const rows = state.attempts.filter(a => a.skill === skillId);
+  return rows.length >= 2 && rows.slice(-2).every(a => !a.correct || a.hinted);
+}
+function diagnosticQuestions() {
+  return SKILLS.flatMap(s => [QUESTIONS.find(q => q.skill === s.id && q.level === 1 && q.kind === 'sort'), QUESTIONS.find(q => q.skill === s.id && q.level === 2)]);
+}
+function nextQuestion(state, { skillId = null, seen = [], rng = Math.random } = {}) {
+  const target = skillId || recommendSkill(state);
+  const level = levelFor(state, target);
+  const all = QUESTIONS.filter(q => q.skill === target);
+  let pool = all.filter(q => q.level === level && !seen.includes(q.id));
+  if (!pool.length) pool = all.filter(q => !seen.includes(q.id));
+  if (!pool.length) pool = all;
+  // Prefer questions not recently answered across earlier sessions.
+  const recentIds = new Set(state.attempts.slice(-12).map(a => a.questionId));
+  const fresh = pool.filter(q => !recentIds.has(q.id));
+  if (fresh.length) pool = fresh;
+  return pool[Math.min(pool.length - 1, Math.floor(Math.max(0, rng()) * pool.length))];
+}
+function recordAnswer(state, question, answer, { hinted = false, mode = 'practice', at = Date.now() } = {}) {
+  if (!question.options.includes(answer)) throw new Error('Invalid answer');
+  const entry = { questionId: question.id, skill: question.skill, correct: answer === question.answer, hinted, mode, at };
+  state.attempts.push(entry);
+  return entry;
+}
+function shuffled(items, rng = Math.random) {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) { const j = Math.min(i, Math.floor(Math.max(0, rng()) * (i + 1))); [result[i], result[j]] = [result[j], result[i]]; }
+  return result;
+}
+
+
+const $ = selector => document.querySelector(selector);
+const main = $('#main');
+const modal = $('#activity');
+const modalBody = $('#activity-content');
+let storage;
+try { storage = window.localStorage; } catch { storage = null; }
+let state = loadState(storage);
+let session = null;
+let lastFocus;
+let saveWarningShown = false;
+const ar = n => Number(n).toLocaleString('ar');
+const escapeHTML = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const icon = (name, size = 22) => {
+  const paths = {
+    arrow: '<path d="M19 12H5m6-6-6 6 6 6"/>',
+    book: '<path d="M12 6c-3-3-7-3-10-2v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-3-1-7-1-10 2Zm0 0v15"/>',
+    target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+    star: '<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/>',
+    check: '<path d="m5 12 4 4L19 6"/>',
+    audio: '<path d="m11 4-6 5H2v6h3l6 5V4Zm4 4c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/>',
+    bulb: '<path d="M8 17c0-3-3-4-3-8a7 7 0 0 1 14 0c0 4-3 5-3 8Zm1 3h6m-5 3h4M9 9l3 3 3-3m-3 3v5"/>',
+    chart: '<path d="M4 3v18h17M8 16v-5m5 5V7m5 9V4"/>',
+    close: '<path d="m6 6 12 12M6 18 18 6"/>',
+    shield: '<path d="m12 2 8 3v6c0 5-5 9-8 11-3-2-8-6-8-11V5Z"/><path d="m8 12 3 3 5-6"/>',
+    refresh: '<path d="M20 7a9 9 0 1 0 1 8M20 2v6h-6"/>',
+    download: '<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>'
+  };
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.star}</svg>`;
+};
+
+function persist() {
+  if (!saveState(storage, state) && !saveWarningShown) {
+    saveWarningShown = true;
+    toast('تعذّر الحفظ على هذا المتصفح. يمكنك التعلّم، لكن قد لا يبقى تقدّمك بعد إغلاق الصفحة.');
+  }
+}
+let toastTimer;
+function toast(message) {
+  clearTimeout(toastTimer);
+  (modal.open ? modal : document.body).appendChild($('#toast'));
+  $('#toast').textContent = message;
+  $('#toast').classList.add('show');
+  toastTimer = setTimeout(() => $('#toast').classList.remove('show'), 6500);
+}
+
+function bookArt() {
+  return `<div class="hero-art" aria-hidden="true"><div class="art-orbit"></div><span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span><span class="art-dot"></span>
+    <span class="floating-word word-one"><small>مفرد</small>كتاب</span><span class="floating-word word-two"><small>جمع</small>كُتُب<span>✦</span></span><span class="floating-word word-three">ون <i>+</i> ين</span>
+    <svg class="book-mascot" viewBox="0 0 370 300"><defs><linearGradient id="cover" x2="0" y2="1"><stop stop-color="#b49af5"/><stop offset="1" stop-color="#7755ce"/></linearGradient><linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fffdf4"/><stop offset="1" stop-color="#f0e5d2"/></linearGradient></defs><ellipse cx="194" cy="267" rx="109" ry="15" fill="#49318a" opacity=".12"/><g transform="rotate(-8 185 160)"><path d="M76 92Q128 63 185 98Q242 63 294 92L304 234Q242 211 185 245Q127 211 66 234Z" fill="url(#cover)" stroke="#6240a5" stroke-width="4"/><path d="M83 81Q135 59 185 90Q235 59 287 81L294 217Q238 196 185 228Q132 196 76 217Z" fill="url(#paper)" stroke="#dbcab9" stroke-width="2"/><path d="M185 90v138" stroke="#d7c7b0" stroke-width="3"/><path d="M96 103q33-10 67 5m-67 8q30-9 67 6m42-14q33-12 66-5m-66 18q30-12 66-6" stroke="#d9d1c6" stroke-width="5" stroke-linecap="round"/><ellipse cx="144" cy="155" rx="8" ry="11" fill="#3a285e"/><ellipse cx="225" cy="155" rx="8" ry="11" fill="#3a285e"/><circle cx="146" cy="151" r="2.5" fill="white"/><circle cx="227" cy="151" r="2.5" fill="white"/><ellipse cx="125" cy="175" rx="13" ry="7" fill="#f3b6a6" opacity=".8"/><ellipse cx="244" cy="175" rx="13" ry="7" fill="#f3b6a6" opacity=".8"/><path d="M169 177q15 21 31 0" fill="#d37c80" stroke="#3a285e" stroke-width="3" stroke-linecap="round"/><path d="m106 240-11 20m161-20 11 20" stroke="#4e377d" stroke-width="10" stroke-linecap="round"/><path d="M70 173q-31 5-35-21m264 21q34 2 34-27" stroke="#8d6bd5" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M217 74v32l11-7 10 2V70" fill="#efae5c"/></g><path d="m314 58 5 12 13 5-13 5-5 13-5-13-12-5 12-5Z" fill="#f5bd60"/><path d="m52 225 3 8 9 3-9 3-3 9-3-9-8-3 8-3Z" fill="#a68ddd"/></svg>
+  </div>`;
+}
+
+function renderJourney() {
+  const total = overall(state);
+  const recommendation = getSkill(recommendSkill(state));
+  main.innerHTML = `<section class="welcome-row"><div><span class="eyebrow">مساحة صغيرة لاكتشاف أشياء كبيرة</span><h1>أهلًا أيّها المستكشف! <span class="wave" aria-hidden="true">✦</span></h1><p>جاهز لنحوّل الكلمات إلى مغامرة؟</p></div><div class="points-pill">${icon('star')}<span><b>${ar(total.points)}</b> نقطة اكتشاف</span></div></section>
+    <section class="hero"><div class="hero-copy"><span class="hero-tag"><span></span> اللغة العربية، بطريقة تحبّها</span><h2>كلمة واحدة،<br>وعالم من <em>الجموع.</em></h2><p>تعلّم، جرّب، واكتشف الفرق بين أنواع الجموع.<br>رحلة تتغيّر مع مستواك، وخطوة جديدة مع كل محاولة.</p><button class="button primary" data-action="${state.diagnosticDone ? 'adaptive' : 'diagnostic'}">${state.diagnosticDone ? 'أكمل مغامرتي' : 'لنكتشف نقطة البداية'} ${icon('arrow')}</button><span class="hero-footnote">${icon('target', 16)} ${state.diagnosticDone ? `خطوتك المقترحة: ${recommendation.title}` : '٦ أسئلة قصيرة · بلا مؤقّت أو ضغط'}</span></div>${bookArt()}</section>
+    <section class="overview" aria-label="ملخّص رحلتك"><div class="overview-title"><span class="overview-icon">${icon('chart')}</span><span><b>كل محاولة تصنع فرقًا</b><small>تقدّمك يُحفظ تلقائيًا على هذا الجهاز</small></span></div><div class="overview-stat"><b>${ar(total.mastered)}<small> / ٣</small></b><span>مهارات متقَنة</span></div><div class="overview-stat"><b>${ar(total.attempts)}</b><span>محاولات تعلّم</span></div><div class="overall-progress"><div><span>مؤشّر الإتقان</span><b>${ar(total.mastery)}٪</b></div><div class="progress-track" role="progressbar" aria-label="مؤشّر الإتقان العام" aria-valuenow="${total.mastery}" aria-valuemin="0" aria-valuemax="100"><span style="width:${total.mastery}%"></span></div></div></section>
+    <section class="stations"><div class="section-heading"><div><span class="eyebrow">ثلاث محطات… ومغامرة واحدة</span><h2>اختر محطّتك التعليمية</h2></div><span class="soft-label">${icon('book', 17)} تعلّم على مهل</span></div><div class="station-grid">${SKILLS.map(skillCard).join('')}</div></section>
+    <section class="bottom-grid"><article class="adaptive-note"><span class="note-icon">${icon('bulb', 27)}</span><div><h3>رحلتك تشبهك أنت</h3><p>عندما تحتاج مساعدة، نعود إلى مثال أبسط. وعندما تتمكّن، ننتقل إلى تحدٍّ جديد.</p></div><button class="text-button" data-action="adaptive">تدرّب حسب مستواي ${icon('arrow', 18)}</button></article><a href="#report" class="achievement-preview"><span class="mini-medal" aria-hidden="true">✦</span><div><h3>إنجازات تستحقّ الفخر</h3><p>${total.mastered ? `أحرزتَ ${ar(total.mastered)} من شارات الإتقان!` : 'شارة جديدة تنتظرك مع كل مهارة تتقنها.'}</p></div><span aria-hidden="true">←</span></a></section>`;
+}
+
+function skillCard(skill) {
+  const info = stats(state, skill.id);
+  const status = info.mastered ? 'مهارة متقَنة' : info.total ? 'واصل الاكتشاف' : 'لنبدأ من هنا';
+  return `<article class="station-card ${skill.color}"><div class="card-top"><span class="station-symbol" aria-hidden="true">${skill.symbol}</span><span class="station-number">المحطّة ${skill.number}</span></div><span class="card-subtitle">${skill.subtitle}</span><h3>${skill.title}</h3><p class="formula">${skill.formula}</p><div class="card-progress-label"><span>${info.mastered ? '✓ ' : ''}${status}</span><b>${ar(info.mastery)}٪</b></div><div class="progress-track" role="progressbar" aria-label="إتقان ${skill.title}" aria-valuenow="${info.mastery}" aria-valuemin="0" aria-valuemax="100"><span style="width:${info.mastery}%"></span></div><div class="card-actions"><button class="button station-button" data-action="lesson" data-skill="${skill.id}">اكتشف الدرس ${icon('arrow', 18)}</button><button class="practice-link" data-action="practice" data-skill="${skill.id}">تدرّب</button></div></article>`;
+}
+
+function renderGuide() {
+  main.innerHTML = `<section class="page-heading"><span class="eyebrow">مرجعك في كل خطوة</span><h1>دليل الجموع</h1><p>الجمع يدلّ على ثلاثة فأكثر. تعرّف إلى الأنواع الثلاثة وقارن بينها.</p></section><div class="guide-grid">${SKILLS.map(s => `<article class="guide-card ${s.color}"><span class="station-symbol" aria-hidden="true">${s.symbol}</span><h2>${s.title}</h2><p>${s.rule}</p><div class="example-list">${s.examples.map(([a,b]) => `<div><span>${a}</span><span aria-hidden="true">←</span><b>${b}</b></div>`).join('')}</div><p class="guide-note">${s.note}</p><button class="button station-button" data-action="practice" data-skill="${s.id}">جرّب ما تعلّمته ${icon('arrow', 18)}</button></article>`).join('')}</div><aside class="comparison-note">${icon('bulb', 26)}<div><h2>فكّر في المفرد قبل أن تحكم</h2><p>«معلّمون» جمع مذكر سالم، لكن «عيون» جمع تكسير ومفرده «عين». و«معلّمات» جمع مؤنث سالم، لكن «أبيات» جمع تكسير ومفرده «بيت».</p></div></aside><div class="center-actions"><button class="button primary" data-action="adaptive">لنختبر فهمي ${icon('arrow')}</button><button class="button outline" data-action="diagnostic">أعد الاختبار التشخيصي</button></div>`;
+}
+
+function renderReport() {
+  const total = overall(state);
+  const best = getSkill(recommendSkill(state));
+  main.innerHTML = `<section class="page-heading"><span class="eyebrow">أرى تقدّمي… وأختار خطوتي التالية</span><h1>كل خطوة تحسب لك</h1><p>لوحة الطالب والمعلم لهذا المتصفح. تعرض بيانات التعلّم المحفوظة على هذا الجهاز فقط.</p></section><div class="report-stats"><article><span>${icon('star')}</span><b>${ar(total.points)}</b><p>نقطة اكتشاف</p></article><article><span>${icon('shield')}</span><b>${ar(total.mastered)} / ٣</b><p>مهارات متقَنة</p></article><article><span>${icon('target')}</span><b>${ar(total.attempts)}</b><p>محاولات مسجّلة</p></article><article><span>${icon('book')}</span><b>${ar(state.sessions)}</b><p>جولات مكتملة</p></article></div>
+    ${!total.attempts ? '<div class="empty-state"><h2>رحلتك لم تبدأ بعد، والفرصة أمامك!</h2><p>أجب عن أسئلة البداية، وستظهر هنا المهارات التي أتقنتها وما يحتاج إلى تدريب.</p><button class="button primary" data-action="diagnostic">ابدأ اختبار البداية ←</button></div>' : ''}
+    <section class="report-panel"><div class="section-heading"><div><span class="eyebrow">تفاصيل تساعدك على التعلّم</span><h2>مهاراتي الثلاث</h2></div></div><div class="table-wrap"><table><caption class="sr-only">تقدّم الطالب بحسب نوع الجمع</caption><thead><tr><th scope="col">المهارة</th><th scope="col">المحاولات</th><th scope="col">صحيحة دون تلميح</th><th scope="col">مؤشّر الإتقان</th><th scope="col">خطوتي التالية</th></tr></thead><tbody>${SKILLS.map(s => { const info = stats(state, s.id); return `<tr><th scope="row"><span class="table-dot ${s.color}"></span>${s.title}</th><td>${ar(info.total)}</td><td>${ar(info.correct)}</td><td><b>${ar(info.mastery)}٪</b> <span class="status-label ${info.mastered ? 'done' : ''}">${info.mastered ? 'متقَن' : info.total ? 'قيد التعلّم' : 'لم يبدأ'}</span></td><td><button class="text-button" data-action="practice" data-skill="${s.id}">${needsSupport(state, s.id) ? 'مراجعة مع مساعدة' : 'تدريب'} ←</button></td></tr>`; }).join('')}</tbody></table></div><p class="report-explanation">يُحسب مؤشّر كل مهارة من آخر ٥ إجابات: ٢٠٪ لكل إجابة صحيحة دون تلميح. تُمنح شارة الإتقان عند إجابة ٤ من آخر ٥ إجابات بشكل صحيح دون تلميح. النتيجة وسيلة لتوجيه التعلّم وليست علامة مدرسية.</p></section>
+    <section class="badge-section"><h2>شارات رحلتي</h2><div class="badge-grid">${SKILLS.map(s => { const earned = stats(state, s.id).mastered; return `<article class="badge-card ${earned ? 'earned' : ''}"><span class="badge-medal" aria-hidden="true">${earned ? '✦' : '☆'}</span><h3>مستكشف ${s.short}</h3><p>${earned ? 'أحسنت! حقّقت شرط الإتقان.' : 'أجب عن ٤ من آخر ٥ أسئلة دون تلميح.'}</p></article>`; }).join('')}</div></section>
+    <aside class="comparison-note">${icon('bulb', 26)}<div><h2>${total.attempts ? `خطوتك المقترحة: ${best.title}` : 'بداية بسيطة تُحدث فرقًا'}</h2><p>${total.attempts ? 'نقترح المهارة ذات الإتقان الأقل، ثم الأقل تدريبًا عند التعادل.' : 'الاختبار التشخيصي يساعدنا على اختيار التدريب المناسب لك.'}</p></div><button class="button primary" data-action="${state.diagnosticDone ? 'adaptive' : 'diagnostic'}">${state.diagnosticDone ? 'ابدأ التدريب' : 'ابدأ التشخيص'} ←</button></aside>
+    <div class="report-tools"><p>${icon('shield', 18)} بياناتك على جهازك، دون اسم أو حساب.</p><button class="button outline small" data-action="export">${icon('download', 18)} تنزيل تقرير</button><button class="text-button danger" data-action="reset">إعادة ضبط التقدّم</button></div>`;
+}
+
+function render() {
+  const route = location.hash.slice(1) || 'journey';
+  document.querySelectorAll('[data-nav]').forEach(a => { const active = a.dataset.nav === route; a.classList.toggle('active', active); if (active) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  if (route === 'report') renderReport(); else if (route === 'guide') renderGuide(); else renderJourney();
+}
+
+function showModal(html) {
+  const alreadyOpen = modal.open;
+  if (!alreadyOpen) lastFocus = document.activeElement;
+  modalBody.innerHTML = html;
+  if (!alreadyOpen) modal.showModal();
+  modalBody.scrollTop = 0;
+  const focusTarget = modalBody.querySelector('[data-focus]') || modalBody.querySelector('h2');
+  if (focusTarget) { focusTarget.tabIndex = -1; focusTarget.focus(); }
+}
+function closeModal() { modal.close(); }
+modal.addEventListener('close', () => {
+  document.body.appendChild($('#toast'));
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  session = null;
+  render();
+  // Main content was rebuilt, so locate an equivalent trigger before restoring focus.
+  if (lastFocus?.isConnected) lastFocus.focus();
+  else if (lastFocus?.dataset.action) {
+    const match = [...document.querySelectorAll('[data-action]')].find(el => el.dataset.action === lastFocus.dataset.action && el.dataset.skill === lastFocus.dataset.skill);
+    (match || main).focus();
+  } else main.focus();
+});
+function modalHeader(label) { return `<div class="modal-top"><span class="eyebrow">${label}</span><button class="icon-button" data-action="close" aria-label="إغلاق النشاط">${icon('close')}</button></div>`; }
+
+function showLesson(id) {
+  const s = getSkill(id);
+  showModal(`${modalHeader('محطّة اكتشاف')}<div class="lesson-content ${s.color}"><span class="station-symbol" aria-hidden="true">${s.symbol}</span><h2 id="activity-title">${s.title}</h2><p class="lesson-rule">${s.rule}</p><div class="lesson-examples">${s.examples.map(([a,b]) => `<div><span>${a}</span><span aria-hidden="true">←</span><strong>${b}</strong></div>`).join('')}</div><aside class="lesson-tip">${icon('bulb', 22)}<p>${s.note}</p></aside><div class="lesson-actions"><button class="button primary" data-action="lesson-practice" data-skill="${s.id}">فهمت، لنجرّب ${icon('arrow')}</button><button class="button outline" data-action="speak-lesson" data-skill="${s.id}">${icon('audio', 19)} استمع للشرح</button></div></div>`);
+}
+
+function startSession(mode, skillId = null) {
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  session = { mode, skillId, index: 0, size: 6, seen: [], results: [], selected: null, hinted: false, answered: false, questions: mode === 'diagnostic' ? diagnosticQuestions() : null };
+  advanceQuestion();
+}
+function advanceQuestion() {
+  if (!session) return;
+  if (session.index >= session.size) return finishSession();
+  const q = session.questions ? session.questions[session.index] : nextQuestion(state, { skillId: session.skillId, seen: session.seen });
+  session.q = q;
+  session.seen.push(q.id);
+  session.selected = null;
+  session.hinted = false;
+  session.answered = false;
+  session.options = shuffled(q.options);
+  renderQuestion();
+}
+function renderQuestion() {
+  const q = session.q;
+  const skill = getSkill(q.skill);
+  const diagnostic = session.mode === 'diagnostic';
+  const support = !diagnostic && needsSupport(state, q.skill);
+  showModal(`${modalHeader(diagnostic ? 'لنكتشف نقطة البداية' : 'تدريب يناسبك')}<div class="question-meta"><span>السؤال ${ar(session.index + 1)} من ${ar(session.size)}</span><span class="level-pill">${diagnostic ? 'اكتشاف المستوى' : ['خطوة أولى', 'نبني الفهم', 'تحدّي التطبيق'][q.level - 1]}</span></div><div class="question-progress progress-track"><span style="width:${session.index / session.size * 100}%"></span></div><div class="question-content"><span class="question-kind">${q.kind === 'sort' ? 'صنّف الكلمة' : q.kind === 'match' ? 'صِل المفرد بجمعه' : 'فكّر واختر'}</span><h2 id="activity-title">${q.prompt}</h2>${support ? `<div class="support-box"><b>نأخذ خطوة أبسط معًا</b><p>${skill.rule}</p></div>` : ''}${q.kind === 'sort' ? '<p class="drag-instruction">اختر صندوق الإجابة، أو اسحب بطاقة الكلمة إليه.</p><div class="drag-token" draggable="true" id="word-token">'+ escapeHTML(q.prompt.match(/«(.*?)»/)?.[1] || '') + '</div>' : ''}<div class="answer-options ${q.kind === 'sort' ? 'sort-options' : ''}" role="group" aria-label="خيارات الإجابة">${session.options.map((option, i) => `<button class="answer-option" data-action="select" data-index="${i}" aria-pressed="false"><span class="option-marker">${['أ','ب','ج'][i]}</span><span>${escapeHTML(option)}</span><span class="option-check" aria-hidden="true">✓</span></button>`).join('')}</div><div id="hint-box" class="hint-box" hidden></div><div id="answer-feedback" aria-live="polite" aria-atomic="true"></div><div class="question-actions"><button class="button primary" data-action="check-answer" disabled>تحقّق من إجابتي ${icon('check', 19)}</button><button class="button primary" data-action="next" hidden>السؤال التالي ${icon('arrow', 19)}</button>${!diagnostic ? `<button class="text-button" data-action="hint">${icon('bulb', 19)} أحتاج تلميحًا</button>` : ''}<button class="icon-button audio-button" data-action="speak-question" aria-label="استمع للسؤال">${icon('audio')}</button></div><p class="question-reassurance">${diagnostic ? 'اختر ما تعرفه؛ كل إجابة تساعدنا على تحديد البداية المناسبة.' : 'لا بأس بالخطأ، نحن هنا لنتعلّم.'}</p></div>`);
+  const token = $('#word-token');
+  if (token) {
+    token.addEventListener('dragstart', event => { event.dataTransfer.setData('text/plain', q.id); event.dataTransfer.effectAllowed = 'move'; });
+    document.querySelectorAll('.answer-option').forEach(btn => {
+      btn.addEventListener('dragover', event => { event.preventDefault(); if (!session?.answered) btn.classList.add('drag-over'); });
+      btn.addEventListener('dragleave', () => btn.classList.remove('drag-over'));
+      btn.addEventListener('drop', event => { event.preventDefault(); btn.classList.remove('drag-over'); if (event.dataTransfer.getData('text/plain') === q.id) selectAnswer(Number(btn.dataset.index)); });
+    });
+  }
+}
+
+function selectAnswer(index) {
+  if (!session || session.answered || !session.options[index]) return;
+  session.selected = session.options[index];
+  document.querySelectorAll('.answer-option').forEach((button, i) => { button.classList.toggle('selected', i === index); button.setAttribute('aria-pressed', String(i === index)); });
+  $('[data-action="check-answer"]').disabled = false;
+}
+function showHint() {
+  if (!session || session.answered || session.hinted) return;
+  session.hinted = true;
+  const box = $('#hint-box');
+  box.hidden = false;
+  box.innerHTML = `<b>تلميح صغير</b><p>${getSkill(session.q.skill).tip}</p><small>تُحسب الإجابة مع مساعدة، وتكسب بها ٥ نقاط إذا صحّت.</small>`;
+  const button = $('[data-action="hint"]');
+  button.disabled = true;
+  box.setAttribute('role', 'status');
+  box.tabIndex = -1;
+  box.focus();
+}
+function checkAnswer() {
+  if (!session || session.answered || !session.selected) return;
+  session.answered = true;
+  const entry = recordAnswer(state, session.q, session.selected, { mode: session.mode, hinted: session.hinted });
+  session.results.push(entry);
+  persist();
+  document.querySelectorAll('.answer-option').forEach(button => {
+    button.disabled = true;
+    const option = session.options[Number(button.dataset.index)];
+    button.classList.toggle('correct-answer', option === session.q.answer);
+    button.classList.toggle('wrong-answer', option === session.selected && !entry.correct);
+  });
+  $('#answer-feedback').innerHTML = `<div class="feedback ${entry.correct ? 'positive' : 'retry'}"><b>${entry.correct ? session.hinted ? 'أحسنت استخدام المساعدة! +٥ نقاط' : 'أحسنت، إجابة صحيحة! +١٠ نقاط' : 'محاولة مفيدة! لنفهمها معًا.'}</b>${!entry.correct ? `<p>الإجابة الصحيحة: <strong>${escapeHTML(session.q.answer)}</strong></p>` : ''}<p>${session.q.explanation}</p></div>`;
+  $('[data-action="check-answer"]').hidden = true;
+  const next = $('[data-action="next"]');
+  next.hidden = false;
+  if (session.index === session.size - 1) next.innerHTML = `شاهد حصيلة الجولة ${icon('arrow', 19)}`;
+  if ($('[data-action="hint"]')) $('[data-action="hint"]').disabled = true;
+}
+function finishSession() {
+  const current = session;
+  if (current.mode === 'diagnostic') state.diagnosticDone = true;
+  state.sessions++;
+  persist();
+  const independent = current.results.filter(r => r.correct && !r.hinted).length;
+  const supported = current.results.filter(r => r.correct && r.hinted).length;
+  const nextSkill = getSkill(recommendSkill(state));
+  const points = current.results.reduce((n,a) => n + (a.correct ? a.hinted ? 5 : 10 : 0), 0);
+  session = null;
+  showModal(`${modalHeader('حصيلة مغامرتك')}<div class="session-summary"><span class="summary-medal" aria-hidden="true">✦</span><h2 id="activity-title">خطوة جديدة تستحقّ الفخر!</h2><p>${current.mode === 'diagnostic' ? 'اكتشفنا نقطة البداية. الآن نبني رحلتك خطوة خطوة.' : 'كل محاولة قرّبتك من فهم الجموع أكثر.'}</p><div class="summary-numbers"><div><b>${ar(independent)} / ${ar(current.size)}</b><span>صحيحة دون تلميح</span></div><div><b>+${ar(points)}</b><span>نقطة اكتشاف</span></div></div>${supported ? `<p>وأجبتَ عن ${ar(supported)} ${supported === 1 ? 'سؤال' : 'أسئلة'} بشكل صحيح مع تلميح.</p>` : ''}<div class="summary-skills">${SKILLS.filter(s => current.results.some(r => r.skill === s.id)).map(s => { const info = stats(state,s.id); return `<div><span>${s.title}</span><b>${info.mastered ? '✦ متقَن' : `${ar(info.mastery)}٪`}</b></div>`; }).join('')}</div><aside class="summary-recommendation"><b>خطوتك المقترحة: ${nextSkill.title}</b><p>${needsSupport(state,nextSkill.id) ? 'سنراجع مثالًا مبسّطًا ثم نجرّب سؤالًا جديدًا.' : 'نختار لك أسئلة تناسب ما أظهرته من فهم.'}</p></aside><div class="center-actions"><button class="button primary" data-action="adaptive">واصل المغامرة ${icon('arrow')}</button><button class="button outline" data-action="view-report">شاهد تقدّمي</button></div></div>`);
+}
+
+function speak(text) {
+  if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) return toast('القراءة الصوتية غير متاحة في هذا المتصفح. يمكنك قراءة النص الظاهر.');
+  const voices = window.speechSynthesis.getVoices();
+  const voice = voices.find(v => v.lang.toLowerCase().startsWith('ar'));
+  if (!voice) return toast('لا يتوفّر صوت عربي على هذا الجهاز. يمكنك تفعيل صوت عربي من إعدادات النظام.');
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.voice = voice;
+  utterance.lang = voice.lang;
+  utterance.rate = 0.85;
+  utterance.onerror = () => toast('تعذّر تشغيل الصوت. حاول مجددًا أو اقرأ النص الظاهر.');
+  window.speechSynthesis.speak(utterance);
+}
+
+function exportReport() {
+  const report = { application: 'PluralQuest', exportedAt: new Date().toISOString(), scope: 'بيانات هذا المتصفح فقط؛ لا تتضمن أسماء الطلاب', diagnosticDone: state.diagnosticDone, sessions: state.sessions, skills: SKILLS.map(s => ({ skill: s.title, ...stats(state, s.id) })), ...overall(state), attempts: state.attempts };
+  const url = URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json;charset=utf-8'}));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `PluralQuest-report-${new Date().toISOString().slice(0,10)}.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url),1000);
+  toast('تمّ تجهيز تقرير التقدّم للتنزيل.');
+}
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('[data-action]');
+  if (!button || button.disabled) return;
+  const { action, skill } = button.dataset;
+  switch (action) {
+    case 'close': closeModal(); break;
+    case 'lesson': showLesson(skill); break;
+    case 'lesson-practice': if (!state.lessons.includes(skill)) state.lessons.push(skill); persist(); startSession('practice',skill); break;
+    case 'practice': startSession('practice',skill); break;
+    case 'adaptive': startSession('practice'); break;
+    case 'diagnostic': startSession('diagnostic'); break;
+    case 'select': selectAnswer(Number(button.dataset.index)); break;
+    case 'check-answer': checkAnswer(); break;
+    case 'hint': showHint(); break;
+    case 'next': if (session?.answered) { session.index++; advanceQuestion(); } break;
+    case 'view-report': closeModal(); location.hash = 'report'; break;
+    case 'speak-lesson': { const s = getSkill(skill); speak(`${s.title}. ${s.rule}. ${s.note}`); break; }
+    case 'speak-question': if (session) speak(`${session.q.prompt}. ${session.options.join('. أو. ')}`); break;
+    case 'export': exportReport(); break;
+    case 'reset': showModal(`${modalHeader('بداية جديدة')}<div class="reset-content"><h2 id="activity-title">هل تريد إعادة ضبط التقدّم؟</h2><p>سيُحذف سجلّ المحاولات والنقاط والشارات من هذا المتصفح. يمكنك تنزيل التقرير أولًا للاحتفاظ بسجلّك.</p><div class="center-actions"><button class="button outline" data-action="close">احتفظ بتقدّمي</button><button class="button danger-button" data-action="confirm-reset">نعم، ابدأ من جديد</button></div></div>`); break;
+    case 'confirm-reset': state = createState(); persist(); closeModal(); toast('بدأت رحلة جديدة. كل التوفيق أيّها المستكشف!'); break;
+  }
+});
+window.addEventListener('hashchange', () => { render(); main.focus(); window.scrollTo({top:0,behavior:'instant'}); });
+render();
+
+})();
+</script>
+</body>
+</html>
